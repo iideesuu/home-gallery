@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- server: Escape social media title and description agains injections
 - server: Fix social media dimension
 
 ### Changed
