@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- server: Fix social media dimension
+
 ### Changed
 
 - server: Add server.trustProxy option and disable proxy trust by default
