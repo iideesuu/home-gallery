@@ -395,6 +395,26 @@
           ],
           "type": "string"
         },
+        "trustProxy": {
+          "description": "Trust source ip as trusted proxy. Default is off",
+          "oneOf": [
+            {
+              "description": "Predefined local ip addresses. See expressjs documentation for details",
+              "enum": [
+                "loopback",
+                "linklokal",
+                "uniquelocal"
+              ]
+            },
+            {
+              "description": "Dedicated IP address",
+              "type": "string",
+              "examples": [
+                "192.168.5.42"
+              ]
+            }
+          ]
+        },
         "prefix": {
           "description": "Prefix of application, including basePath of http page",
           "type": "string",

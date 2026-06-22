@@ -233,6 +233,11 @@
   #key: '{configDir}/server.key'
   # Optional https certificate
   #cert: '{configDir}/server.crt'
+  # Trust source ip as trusted proxy. Default is off
+  # Predefined local ip addresses. See expressjs documentation for details
+  #trustProxy: loopback # one of: loopback, linklokal, uniquelocal
+  # Dedicated IP address
+  #trustProxy: '192.168.5.42'
   # Prefix of application, including basePath of http page
   #prefix: /gallery
   # Prefix path for browser only. basePath is Overwritten by prefix

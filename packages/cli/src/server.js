@@ -93,6 +93,10 @@ const command = {
         array: true,
         describe: 'IP whitelist rule in format type:network. E.g. allow:192.168.0/24 or deny:all. First matching rule wins.'
       },
+      'trust-proxy': {
+        string: true,
+        describe: 'Trust proxy setting. Use loopback, linklocal, uniquelocal or provide ip address'
+      },
       'open-browser': {
         boolean: true,
         describe: 'Open browser on server start'
@@ -132,6 +136,7 @@ const command = {
       remoteConsoleToken: 'server.removeConsoleToken',
       user: {path: 'server.auth.users', type: 'add', map: mapUsers},
       ipWhitelistRule: {path: 'server.auth.rules', map: mapRules},
+      trustProxy: {path: 'server.trustProxy'},
       importSources: {path: 'server.importSources'},
       watchSources: {path: 'server.watchSources'}
     }

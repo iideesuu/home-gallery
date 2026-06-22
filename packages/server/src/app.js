@@ -48,7 +48,12 @@ export async function createApp(context) {
   const { config } = context
   const app = context.app = express();
   app.disable('x-powered-by')
-  app.enable('trust proxy')
+  if (config?.server?.trustProxy) {
+    const trustProxy = config?.server?.trustProxy
+    log.info(`Trust proxy ${trustProxy}`)
+    app.enable('trust proxy', trustProxy)
+  }
+
   app.use(augmentReqByUserMiddleware())
   app.use(loggerMiddleware())
 
